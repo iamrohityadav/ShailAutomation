@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.iot.shail.automation">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".activitys.SplashActivity"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activitys.LoginActivity"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".activitys.ForgotPasswordActivity"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".activitys.RegisterStepOneActivity"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".activitys.RegisterStepTwoActivity"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".activitys.RegisterStepThirdActivity"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".activitys.AddDeviceActivity"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".activitys.HomeActivity"
+            android:configChanges="orientation|screenSize"/>
+    </application>
+</manifest>

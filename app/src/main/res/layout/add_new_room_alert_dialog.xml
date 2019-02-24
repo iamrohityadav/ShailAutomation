@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@color/colorAlertDialogBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/shail_automation"
+            android:text="Add New Room"
+            android:textSize="20dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/roomNameTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/roomNameTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/shail_automation"
+                android:hint="Room Name"
+                android:inputType="textCapWords"
+                android:textSize="15sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <RelativeLayout
+            android:id="@+id/selectRoomTypeRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:background="@drawable/select_room_text_view_background">
+
+            <ImageView
+                android:id="@+id/selected_room_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/upper_line"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_bed_room" />
+
+            <TextView
+                android:id="@+id/selected_room_name_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:hint="Select Room Type"
+                android:layout_alignParentRight="true" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/upper_line"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+        </RelativeLayout>
+
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:id="@+id/select_assigned_users_material_better_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/select_room_text_view_background"
+            android:layout_marginTop="5dp"
+            app:ms_multiline="false"
+            app:ms_hint="Assigned Users"
+            app:ms_enableFloatingLabel="false"
+            app:ms_enableErrorLabel="false"
+            app:ms_floatingLabelText="floating label"
+            app:ms_highlightColor="@color/colorPrimaryDark"
+            app:ms_errorColor="@android:color/darker_gray"
+            app:ms_hintColor="@android:color/darker_gray"
+            app:ms_arrowColor="#989898"
+            app:ms_arrowSize="18dp"
+            app:ms_alignLabels="false"
+            app:ms_alwaysShowFloatingLabel="true"
+            app:ms_floatingLabelColor="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:shadowColor="@android:color/transparent"
+            android:inputType="text"
+            android:text="Add"
+            android:textSize="20dp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/shail_automation"
+            android:background="@drawable/terms_condition_button_background"/>
+
+        <Button
+            android:id="@+id/close_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:shadowColor="@android:color/transparent"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/shail_automation"
+            android:textSize="20dp"
+            android:text="Close"
+            android:inputType="text"
+            android:background="@drawable/terms_condition_button_background" />
+    </LinearLayout>
+</LinearLayout>

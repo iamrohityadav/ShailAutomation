@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".activitys.AddDeviceActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/shail_automation"
+            android:text="Add Device"
+            android:textSize="20dp"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="60dp"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/deviceNameTextInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="5dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/deviceNameTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/shail_automation"
+                        android:hint="Device Name"
+                        android:inputType="textCapWords"
+                        android:nextFocusDown="@+id/surnameTextInputEditText"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/selectCreatedRoomRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/select_room_text_view_background">
+
+                    <ImageView
+                        android:id="@+id/selected_room_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/upper_line"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="5dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_bed_room" />
+
+                    <TextView
+                        android:id="@+id/select_created_room_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="center"
+                        android:hint="Select Device Type"
+                        android:layout_alignParentRight="true" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/upper_line"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/selectDeviceTypeRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:background="@drawable/select_room_text_view_background">
+
+                    <ImageView
+                        android:id="@+id/selected_device_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/upper_line"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="5dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_bed_room" />
+
+                    <TextView
+                        android:id="@+id/select_device_type_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="center"
+                        android:hint="Select Device Type"
+                        android:layout_alignParentRight="true" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/upper_line"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+                </RelativeLayout>
+
+                <android.support.design.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+                        android:id="@+id/scan_qr_code_floating_text_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:floating_background_color="@color/colorBlack"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        app:floating_left_icon="@drawable/ic_scan_qr_code"
+                        app:floating_title="Scan QR Code"
+                        app:floating_title_color="@android:color/white"
+                        android:layout_gravity="center|center_horizontal"
+                        app:elevation="10dp"
+                        app:pressedTranslationZ="10dp"/>
+
+                </android.support.design.widget.CoordinatorLayout>
+
+                <android.support.design.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+                        android:id="@+id/add_device_manually_floating_text_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:floating_background_color="@color/colorBlack"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        app:floating_left_icon="@drawable/ic_add_device_manually"
+                        app:floating_title="Manually Add Device"
+                        app:floating_title_color="@android:color/white"
+                        android:layout_gravity="center|center_horizontal"
+                        app:elevation="10dp"
+                        app:pressedTranslationZ="10dp"/>
+
+                </android.support.design.widget.CoordinatorLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/done_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/reset_next_button_background"
+            android:fontFamily="@font/shail_automation"
+            android:shadowColor="@android:color/transparent"
+            android:text="Done"
+            android:inputType="text"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+</RelativeLayout>

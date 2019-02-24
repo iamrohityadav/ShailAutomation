@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".activitys.RegisterStepThirdActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="60dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="Add Room / Priority"
+                android:textSize="30sp"
+                android:fontFamily="@font/shail_automation"
+                android:textColor="@color/colorAccent"/>
+
+            <ListView
+                android:id="@+id/added_room_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:choiceMode="singleChoice"
+                android:background="#fff"
+                android:divider="@null"
+                android:dividerHeight="0dp"/>
+        </LinearLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ru.dimorinny.floatingtextbutton.FloatingTextButton
+                android:id="@+id/add_room_floating_text_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:floating_background_color="@color/colorBlack"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="80dp"
+                app:floating_left_icon="@drawable/ic_add_circle_outline_black_24dp"
+                app:floating_title="ADD ROOM"
+                app:floating_title_color="@android:color/white"
+                android:layout_gravity="bottom|end"
+                app:elevation="10dp"
+                app:pressedTranslationZ="10dp"/>
+
+        </android.support.design.widget.CoordinatorLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#D6F5F8"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/reset_next_button_background"
+            android:fontFamily="@font/shail_automation"
+            android:shadowColor="@android:color/transparent"
+            android:text="Reset"
+            android:inputType="text"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/reset_next_button_background"
+            android:fontFamily="@font/shail_automation"
+            android:shadowColor="@android:color/transparent"
+            android:text="Next"
+            android:inputType="text"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp" />
+    </LinearLayout>
+</RelativeLayout>
